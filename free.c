@@ -11,6 +11,7 @@ void free_s(stack_t *stack)
 	while (stack)
 	{
 		stack_t *joy = stack;
+
 		stack = stack->next;
 		free(joy);
 	}

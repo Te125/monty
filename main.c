@@ -2,8 +2,8 @@
 
 /**
  * main - main function for the monty program
- * argc: argument count
- * argv: array of argument vector
+ * @argc: argument count
+ * @argv: array of argument vector
  *
  * Return: 0 on success, 1 on failure.
  */
@@ -43,7 +43,7 @@ void file_hand(const char *file)
 		p++;
 		tokenize(buf, p, &stack);
 	}
-	
+
 	fclose(fdp);
 	free_s(stack);
 }
