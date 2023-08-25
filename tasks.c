@@ -45,3 +45,22 @@ void pall(stack_t **stack)
 		pal = pal->next;
 	}
 }
+
+/**
+ * pint - function that prints value at the top of the stack
+ * @stack: head of the stack
+ * @num: integer to be called
+ *
+ */
+void pint(stack_t **stack, unsigned int num)
+{
+	stack_t *pin = *stack;
+
+	if (pin == NULL)
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", num);
+		exit(EXIT_FAILURE);
+	}
+
+	printf("%d\n", pin->n);
+}
