@@ -74,7 +74,7 @@ void pint(stack_t **stack, unsigned int num)
 void pop(stack_t **stack, unsigned int num)
 {
 	stack_t *po = *stack;
-	
+
 	*stack = po->next;
 	if (!stack || !*stack)
 	{
