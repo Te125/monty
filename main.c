@@ -62,9 +62,7 @@ void tokenize(char *buf, int p, stack_t **stack)
 
 	token = strtok(buf, " \t\r\n");
 	if (token == NULL || token[0] == '#')
-	{
 		return;
-	}
 	if (strcmp(token, "push") == 0)
 	{
 		token = strtok(NULL, " \t\r\n");
@@ -77,29 +75,23 @@ void tokenize(char *buf, int p, stack_t **stack)
 		push(stack, i);
 	}
 	else if (strcmp(token, "pall") == 0)
-	{
 		pall(stack);
-	}
+
 	else if (strcmp(token, "pint") == 0)
-	{
 		pint(stack, p);
-	}
+
 	else if (strcmp(token, "pop") == 0)
-	{
 		pop(stack, p);
-	}
+
 	else if (strcmp(token, "swap") == 0)
-	{
 		swap(stack, p);
-	}
+
 	else if (strcmp(token, "add") == 0)
-	{
 		add(stack, p);
-	}
+
 	else if (strcmp(token, "nop") == 0)
-	{
 		nop(stack, p);
-	}
+
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", p, token);
