@@ -64,3 +64,27 @@ void pint(stack_t **stack, unsigned int num)
 
 	printf("%d\n", pin->n);
 }
+
+/**
+ * pop - function that removes the top element of the stack
+ * @stack: head of the stack
+ * @num: integer to be removed
+ *
+ */
+void pop(stack_t **stack, unsigned int num)
+{
+	stack_t *po = *stack;
+	
+	*stack = po->next;
+	if (!stack || !*stack)
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", num);
+		exit(EXIT_FAILURE);
+	}
+	if (*stack)
+	{
+		(*stack)->prev = NULL;
+	}
+
+	free(po);
+}

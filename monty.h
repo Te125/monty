@@ -52,6 +52,7 @@ int main(int argc, char *argv[]);
 void push(stack_t **stack, int num);
 void pall(stack_t **stack);
 void pint(stack_t **stack, unsigned int num);
+void pop(stack_t **stack, unsigned int num);
 
 
 

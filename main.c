@@ -84,6 +84,10 @@ void tokenize(char *buf, int p, stack_t **stack)
 	{
 		pint(stack, p);
 	}
+	else if (strcmp(token, "pop") == 0)
+	{
+		pop(stack, p);
+	}
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", p, token);
