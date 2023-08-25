@@ -53,7 +53,9 @@ void push(stack_t **stack, int num);
 void pall(stack_t **stack);
 void pint(stack_t **stack, unsigned int num);
 void pop(stack_t **stack, unsigned int num);
-
+void swap(stack_t **stack, unsigned int num);
+void add(stack_t **stack, unsigned int num);
+void nop(stack_t **stack, unsigned int num);
 
 
 #endif

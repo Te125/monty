@@ -76,12 +76,12 @@ void pop(stack_t **stack, unsigned int num)
 	stack_t *po = *stack;
 
 	*stack = po->next;
-	if (!stack || !*stack)
+	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", num);
 		exit(EXIT_FAILURE);
 	}
-	if (*stack)
+	if (!*stack)
 	{
 		(*stack)->prev = NULL;
 	}

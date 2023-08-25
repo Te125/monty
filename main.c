@@ -88,6 +88,18 @@ void tokenize(char *buf, int p, stack_t **stack)
 	{
 		pop(stack, p);
 	}
+	else if (strcmp(token, "swap") == 0)
+	{
+		swap(stack, p);
+	}
+	else if (strcmp(token, "add") == 0)
+	{
+		add(stack, p);
+	}
+	else if (strcmp(token, "nop") == 0)
+	{
+		nop(stack, p);
+	}
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", p, token);
