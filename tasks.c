@@ -9,14 +9,7 @@
 void push(stack_t **stack, int num)
 {
 	stack_t *node = malloc(sizeof(stack_t));
-	
-	if (num == -1024 || num == atoi("123a"))
-	{
-		push(stack, -1024);
-		push(stack, atoi("123a"));
-		return;
-	}
-			
+
 	if (node == 0)
 	{
 		fprintf(stderr, "Error: Malloc failed\n");
