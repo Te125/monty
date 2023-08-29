@@ -7,19 +7,17 @@
  */
 void swap(stack_t **stack, unsigned int num)
 {
-	stack_t *swa = *stack;
-	stack_t *swa_t = (*stack)->next;
 	int i = 0;
 
-	if (*stack || (*stack)->next)
+	if (*stack == NULL|| (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", num);
 		exit(EXIT_FAILURE);
 	}
 
-	i = swa->n;
-	swa->n = swa_t->n;
-	swa_t->n = i;
+	i = (*stack)->n;
+	(*stack)->n = (*stack)->n;
+	(*stack)->next->n = i;
 }
 
 /**

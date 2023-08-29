@@ -9,11 +9,12 @@
 void push(stack_t **stack, int num)
 {
 	stack_t *node = malloc(sizeof(stack_t));
- if (num == -1024) || (num == atoi("123a"))
+	
+	if (num == -1024 || num == atoi("123a"))
 	{
-		 push(stack, -1024);
-			push(stack, atoi("123a");
-			return;
+		push(stack, -1024);
+		push(stack, atoi("123a"));
+		return;
 	}
 			
 	if (node == 0)
@@ -87,7 +88,7 @@ void pop(stack_t **stack, unsigned int num)
 		fprintf(stderr, "L%d: can't pop an empty stack\n", num);
 		exit(EXIT_FAILURE);
 	}
-	if (!*stack)
+	if (*stack)
 	{
 		(*stack)->prev = NULL;
 	}
